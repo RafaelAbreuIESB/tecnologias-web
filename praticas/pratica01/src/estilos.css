@@ -1,0 +1,251 @@
+/*Formatação Geral*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*Faz o tamanho total do elemento permanecer sempre
+  consistente*/
+}
+
+/*Formatação da Tag Body*/
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex; /* Distribui os elementos em coluna
+  centralizados horizontalmente usando o Flexbox*/
+  flex-direction: column;
+  justify-content: center; /* Garante que o corpo da página ocupe toda a
+  altura da tela do navegador*/
+  height: 100vh;
+}
+
+/*Formatação para a tag Header*/
+header {
+  background-color: #4caf50;
+  color: white;
+  padding: 16px;
+  display: flex; /* centraliza o conteúdo do elemento verticalmente e distribui o conteúdo
+  do elemento horizontalmente com um espaço entre os elementos filhos usando o Flexbox*/
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*Formatação para divs que estão dentro dos Header*/
+header div {
+  display: flex; /* Centraliza o
+  conteúdo do elemento verticalmente usando o Flexbox*/
+  align-items: center;
+}
+
+/*Formatação para imgs que estão dentro dos Header*/
+header img {
+  max-width: 50px;
+  margin-right: 16px;
+  cursor: pointer; /* Tipo de cursor do mouse */
+}
+
+/*Formatação para h1 que estão dentro dos Header*/
+header h1 {
+  font-size: 1.8em;
+}
+
+/*Formatação para inputs do tipo search*/
+input[type="search"] {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 16px;
+}
+
+/*Formatação para a tag main*/
+main {
+  flex: 1;
+  display: flex; /* Transforma em um
+  container flexível que ocupa totalmente a área disponível usando Flexbox*/
+  background-color: #fff;
+}
+
+/*Formatação para label*/
+label {
+  display: block; /* Exibe o elemento em bloco*/
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/*Formatação para a tag input dos tipos text, email e password*/
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  background-color: #f9f9f9;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+/*Formatação para a tag input do tipo submit*/
+input[type="submit"] {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+/*Formatação para a tag nav*/
+nav {
+  flex: 1; /* Ocupa um tamanho flexível usando
+  FlexBox*/
+  background-color: #fff;
+  border-right: 2px solid #ccc;
+  padding: 8px;
+}
+
+/*Formatação para ul dentro das tags nav*/
+nav ul {
+  list-style: none; /*remove o marcador da
+    lista não ordenada*/
+}
+
+/*Formatação para li dentro das tags nav*/
+nav ul li {
+  margin-bottom: 16px;
+}
+
+/*Formatação para a dentro das tags nav*/
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  display: block;
+  padding: 8px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease; /*Cria uma transição para a cor de
+  fundo.*/
+}
+
+/*Formatação para o evento hover na tag a dentro da tag nav*/
+nav ul li a:hover {
+  background-color: #4caf50;
+  color: white;
+}
+
+/*Formatação para a tag Section*/
+section {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 8px 8px 16px;
+}
+
+/*Formatação para a tag h2 dentro da tag section*/
+section h2 {
+  margin-bottom: 16px;
+  font-size: 1.5em;
+  border-bottom: 2px solid #4caf50;
+  padding-bottom: 16px;
+}
+
+/*Formatação para a tag form dentro da tag section*/
+section form {
+  max-width: 368px;
+}
+
+/*Formatação para a tag article*/
+article {
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/*Formatação para a tag footer*/
+footer {
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/*Formatação para a classe login-container*/
+.login-container {
+  max-width: 400px;
+  margin: 48px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 16px;
+  justify-content: center;
+  width: 100%;
+}
+
+/*Formatação para a tag img dentro da classe login-container*/
+.login-container img {
+  max-width: 100px;
+  margin: 0 auto;
+}
+
+/*Formatação para a tag h1 dentro da classe login-container*/
+.login-container h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #4caf50;
+}
+
+/*Formatação para a tag input do tipo submit dentro da classe login-container*/
+.login-container input[type="submit"] {
+  width: 100%;
+}
+
+/*Formatação para a tag a dentro da classe login-container*/
+.login-container a {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.9em;
+  color: #4caf50;
+  text-decoration: none;
+}
+
+/*Formatação da classe card-grid*/
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(400px, 1fr)
+  ); /* Colunas
+  são distribuídas de acordo com um tamanho definido, usando Flexbox*/
+  gap: 16px;
+}
+
+/*Formatação condicional para uma tela de no máximo de 768px*/
+@media (max-width: 768px) {
+  /*Formatação da tag body dentro da regra media*/
+  body {
+    height: 100%;
+    overflow: auto;
+  }
+  /*Formatação da tag header dentro da regra media*/
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  /*Formatação da tag main dentro da regra media*/
+  main{
+    flex-direction: column;
+  }
+  /*Formatação da tag nav dentro da regra media*/
+  nav{
+    border-bottom: 2px solid #ccc;
+  }
+  /*Formatação da classe card-grid dentro da regra media*/
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
