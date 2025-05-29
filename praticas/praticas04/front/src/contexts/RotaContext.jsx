@@ -4,7 +4,7 @@ const RotaContext = createContext();
 function RotaProvider(props) {
   const [rota, setRota] = useState("/listar");
   return (
-    <RotaContext.Provider value={(rota, setRota)}>
+    <RotaContext.Provider value={{rota , setRota}}>
       {props.children}
     </RotaContext.Provider>
   );

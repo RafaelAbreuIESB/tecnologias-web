@@ -4,8 +4,17 @@ import Listagem from "./Listagem.jsx";
 import { RotaContext } from "../contexts/RotaContext.jsx";
 function Listar() {
   const [contatos, setContatos] = useState([]);
-  onst[(erro, setErro)] = useState("");
+  const[erro, setErro] = useState("");
   const { setRota } = useContext(RotaContext);
+  const carregar = async () => {
+    const resposta = await buscarTodos();
+    if (resposta.sucesso) {
+      setContatos(resposta.dados);
+      setErro("");
+    } else {
+      setErro(resposta.mensagem);
+    }
+  };    
   const handleModificar = (id) => {
     setRota(`/editar/${id}`);
   };
@@ -18,15 +27,6 @@ function Listar() {
     }
   };
   useEffect(() => {
-    const carregar = async () => {
-      const resposta = await buscarTodos();
-      if (resposta.sucesso) {
-        setContatos(resposta.dados);
-        setErro("");
-      } else {
-        setErro(resposta.mensagem);
-      }
-    };
     carregar();
   }, []);
   return (

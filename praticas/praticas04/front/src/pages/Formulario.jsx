@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import InputNome from "../components/InputNome.jsx";
 import InputTelefone from "../components/InputTelefone.jsx";
 
-function Fomulario(props) {
+function Formulario(props) {
   const [nome, setNome] = useState("");
   const [erroNome, setErroNome] = useState("");
   const [telefone, setTelefone] = useState("");
@@ -22,13 +22,13 @@ function Fomulario(props) {
       setErroNome("");
       setErroTelefone("");
     }
-    useEffect(() => {
-      if (props.valores) {
-        setNome(props.valores.nome || "");
-        setTelefone(props.valores.telefone || "");
-      }
-    }, [props.valores]);
   };
+  useEffect(() => {
+    if (props.valores) {
+      setNome(props.valores.nome || "");
+      setTelefone(props.valores.telefone || "");
+    }
+  }, [props.valores]);
   return (
     <form onSubmit={handleSubmit}>
       <InputNome
@@ -46,4 +46,4 @@ function Fomulario(props) {
   );
 }
 
-export default Fomulario;
+export default Formulario;

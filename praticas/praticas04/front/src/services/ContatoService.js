@@ -1,6 +1,6 @@
 import axios from "axios";
 const url = import.meta.env.VITE_API_URL;
-function BuscarTodos() {
+function buscarTodos() {
   return axios
     .get(url)
     .then((response) => {
@@ -10,7 +10,7 @@ function BuscarTodos() {
       return { sucesso: false, mensagem: "Ocorreu um erro!" };
     });
 }
-function BuscarPorID(id) {
+function buscarPorId(id) {
   return axios
     .get(`${url}/${id}`)
     .then((response) => {
