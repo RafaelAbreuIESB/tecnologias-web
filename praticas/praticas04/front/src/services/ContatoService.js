@@ -34,20 +34,21 @@ function modificar(id, contato) {
   return axios
     .put(`${url}/${id}`, contato)
     .then((response) => {
-        return { sucesso: true, dados: response.data };
+      return { sucesso: true, dados: response.data };
     })
     .catch((error) => {
-        return { sucesso: false, mensagem: "Ocorreu um erro!" };
+      return { sucesso: false, mensagem: "Ocorreu um erro!" };
     });
 }
-function remover(id){
-    return axios.delete(`${url}/${id}`)
-.then((response) => {
-    return { sucesso: true, dados: response.data };
-})
-.catch((error) => {
-    return { sucesso: false, mensagem: "Ocorreu um erro!" };
-});
+function remover(id) {
+  return axios
+    .delete(`${url}/${id}`)
+    .then((response) => {
+      return { sucesso: true, dados: response.data };
+    })
+    .catch((error) => {
+      return { sucesso: false, mensagem: "Ocorreu um erro!" };
+    });
 }
 
 export { buscarTodos, buscarPorId, adicionar, modificar, remover };

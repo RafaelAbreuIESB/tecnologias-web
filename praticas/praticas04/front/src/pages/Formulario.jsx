@@ -22,11 +22,11 @@ function Fomulario(props) {
       setErroNome("");
       setErroTelefone("");
     }
-    useEffect(() => { 
-        if (props.valores) {
-            setNome(props.valores.nome || "");
-            setTelefone(props.valores.telefone || "");
-            }
+    useEffect(() => {
+      if (props.valores) {
+        setNome(props.valores.nome || "");
+        setTelefone(props.valores.telefone || "");
+      }
     }, [props.valores]);
   };
   return (
